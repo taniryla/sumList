@@ -103,4 +103,5 @@ const recurse = (head, count) => {
     recurse(head.next, count);
   }
 };
+
 sumList(a); // 19
