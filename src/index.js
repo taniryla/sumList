@@ -53,6 +53,26 @@
 // 22.  Can you improve the performance?
 // 23.   How have other people solved this problem?
 
+class Node {
+  constructor(val) {
+    this.val = val;
+    this.next = null;
+  }
+}
+
+const a = new Node(2);
+const b = new Node(8);
+const c = new Node(3);
+const d = new Node(-1);
+const e = new Node(7);
+
+a.next = b;
+b.next = c;
+c.next = d;
+d.next = e;
+
+// 2 -> 8 -> 3 -> -1 -> 7
+
 // while loop
 
 const sumList = (head) => {
@@ -67,3 +87,5 @@ const sumList = (head) => {
   }
   return count;
 };
+
+sumList(a); // 19
