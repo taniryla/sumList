@@ -75,18 +75,32 @@ d.next = e;
 
 // while loop
 
+// const sumList = (head) => {
+//   // make the head current and count variable to zero
+//   let current = head;
+//   let count = 0;
+//   // while loop (current !== null)
+//   while (current !== null) {
+//     // count += current and current = current.next
+//     count += current.val;
+//     current = current.next;
+//   }
+//   console.log(count);
+//   return count;
+// };
+
+// recursion
+
 const sumList = (head) => {
-  // make the head current and count variable to zero
-  let current = head;
   let count = 0;
-  // while loop (current !== null)
-  while (current !== null) {
-    // count += current and current = current.next
-    count += current.val;
-    current = current.next;
-  }
-  console.log(count);
+  recurse(head, count);
   return count;
 };
 
+const recurse = (head, count) => {
+  if (head === null) {
+    count += head.val;
+    recurse(head.next, count);
+  }
+};
 sumList(a); // 19
