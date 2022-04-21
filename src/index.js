@@ -85,6 +85,7 @@ const sumList = (head) => {
     count += current.val;
     current = current.next;
   }
+  console.log(count);
   return count;
 };
 
