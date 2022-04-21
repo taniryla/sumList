@@ -52,3 +52,18 @@
 // 21.  Can you make the code DRYer and refactor?
 // 22.  Can you improve the performance?
 // 23.   How have other people solved this problem?
+
+// while loop
+
+const sumList = (head) => {
+  // make the head current and count variable to zero
+  let current = head;
+  let count = 0;
+  // while loop (current !== null)
+  while (current !== null) {
+    // count += current and current = current.next
+    count += current.val;
+    current = current.next;
+  }
+  return count;
+};
