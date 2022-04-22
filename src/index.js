@@ -92,16 +92,8 @@ d.next = e;
 // recursion
 
 const sumList = (head) => {
-  let count = 0;
-  recurse(head, count);
-  return count;
-};
-
-const recurse = (head, count) => {
-  if (head === null) {
-    count += head.val;
-    recurse(head.next, count);
-  }
+  if (head === null) return 0;
+  return head.val + sumList(head.next);
 };
 
 sumList(a); // 19
